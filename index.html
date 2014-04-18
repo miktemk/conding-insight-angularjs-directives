@@ -1,0 +1,63 @@
+<!doctype html>
+<html >
+<head>
+
+  <title>Directive Test</title>
+    <script type="text/javascript" src="jquery.min.js" ></script>
+    <script type="text/javascript" src="angular.min.js"></script>
+    <script type="text/javascript" src="direxxx.js"></script>
+<!--[if lte IE 8]>
+      <script>
+        document.createElement('ng-switch');
+        document.createElement('ngrepeater');
+      </script>
+    <![endif]-->
+</head>
+<body ng-app>
+<!--[if lte IE 7]>
+<p>Sorry, it seems your browser is too old for this cool content. Please use a newer browser, such as <a href="http://www.microsoft.com/canada/windows/internet-explorer/oie9/default.aspx">IE9</a>, <a href="https://www.google.com/intl/en/chrome/browser/">Chrome</a> or <a href="http://www.mozilla.org/en-US/firefox/new/">Firefox</a>!</p>
+<![endif]-->
+
+<p>NOTE: This document is best opened with <i>Firefox</i>, since Chrome usually prevents from loading
+template files via the $http module</p>
+
+<h1>Basic</h1>
+<div test-elem></div>
+
+<h1>Template URL</h1>
+<p>Note: if you are viewing this locally on IE or Google Chrome, your browser will restrict the loading of template.html. Try Firefox!</p>
+<div test-elem-template></div>
+
+<h1>Transclusion</h1>
+<test-elem-transclude>
+    include me in there... somewhere... dunno where... template will decide
+</test-elem-transclude>
+
+<h1>Compile function</h1>
+<div test-elem-compile>
+    parse me please!!!!!!! come oonnnn! just parse me!!!!!
+</div>
+
+<h1>3 Types of scope params: @, &, =</h1>
+<div ng-controller="MyController">
+    <div>
+        somevar: <span ng-bind="somevar"></span>
+        <br/>
+        somevar2: <span ng-bind="somevar2"></span>
+        <hr/>
+    </div>
+ <my-control
+ param-str="control 1"
+ param-callback="callback()"
+ param-var="somevar"></my-control>
+ <my-control
+ param-str="{{ titleControl2 }}"
+ param-callback="callback2()"
+ param-var="somevar2"></my-control>
+</div>
+
+<h1>Replace: true</h1>
+<replace-test></replace-test>
+
+</body>
+</html>
