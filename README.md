@@ -1,5 +1,4 @@
-
-[Source](http://www.codinginsight.com/angularjs-directives/ "Permalink to AngularJS directives - Coding Insight")
+[View the original tutorial here](http://www.codinginsight.com/angularjs-directives/ "Permalink to AngularJS directives - Coding Insight")
 
 # AngularJS directives - Coding Insight
 
